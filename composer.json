@@ -4,7 +4,7 @@
   "type": "library",
   "description": "Collection library for PHP",
   "keywords": ["collections","sequences", "map", "reduce"],
-  "homepage": "https://github.com/DusanKasan/Knapsack",
+  "homepage": "https://github.com/Invertus/Knapsack",
   "authors": [
     {
       "name": "Dusan Kasan",
@@ -31,12 +31,12 @@
       "src/utility_functions.php"
     ],
     "psr-4": {
-      "DusanKasan\\Knapsack\\": "src/"
+      "Invertus\\Knapsack\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "DusanKasan\\Knapsack\\Tests\\Helpers\\": "tests/helpers/"
+      "Invertus\\Knapsack\\Tests\\Helpers\\": "tests/helpers/"
     }
   }
 }
