@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\DusanKasan\Knapsack\Exceptions;
+namespace spec\Invertus\Knapsack\Exceptions;
 
-use DusanKasan\Knapsack\Exceptions\ItemNotFound;
+use Invertus\Knapsack\Exceptions\ItemNotFound;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use RuntimeException;

@@ -1,8 +1,8 @@
 <?php
 
-namespace DusanKasan\Knapsack\Tests\Scenarios;
+namespace Invertus\Knapsack\Tests\Scenarios;
 
-use DusanKasan\Knapsack\Collection;
+use Invertus\Knapsack\Collection;
 use PHPUnit_Framework_TestCase;
 
 class MultipleOperationsTest extends PHPUnit_Framework_TestCase

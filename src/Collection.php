@@ -1,10 +1,10 @@
 <?php
 
-namespace DusanKasan\Knapsack;
+namespace Invertus\Knapsack;
 
 use ArrayIterator;
-use DusanKasan\Knapsack\Exceptions\InvalidArgument;
-use DusanKasan\Knapsack\Exceptions\InvalidReturnValue;
+use Invertus\Knapsack\Exceptions\InvalidArgument;
+use Invertus\Knapsack\Exceptions\InvalidReturnValue;
 use IteratorAggregate;
 use Traversable;
 
@@ -88,7 +88,7 @@ class Collection implements IteratorAggregate, \Serializable, CollectionInterfac
      */
     public static function range($start = 0, $end = null, $step = 1)
     {
-        return \DusanKasan\Knapsack\range($start, $end, $step);
+        return \Invertus\Knapsack\range($start, $end, $step);
     }
 
     /**

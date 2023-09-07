@@ -1,15 +1,15 @@
 <?php
 
-namespace spec\DusanKasan\Knapsack;
+namespace spec\Invertus\Knapsack;
 
 use ArrayIterator;
 use DOMXPath;
-use DusanKasan\Knapsack\Collection;
-use DusanKasan\Knapsack\Exceptions\InvalidArgument;
-use DusanKasan\Knapsack\Exceptions\InvalidReturnValue;
-use DusanKasan\Knapsack\Exceptions\ItemNotFound;
-use DusanKasan\Knapsack\Exceptions\NoMoreItems;
-use DusanKasan\Knapsack\Tests\Helpers\PlusOneAdder;
+use Invertus\Knapsack\Collection;
+use Invertus\Knapsack\Exceptions\InvalidArgument;
+use Invertus\Knapsack\Exceptions\InvalidReturnValue;
+use Invertus\Knapsack\Exceptions\ItemNotFound;
+use Invertus\Knapsack\Exceptions\NoMoreItems;
+use Invertus\Knapsack\Tests\Helpers\PlusOneAdder;
 use IteratorAggregate;
 use PhpSpec\ObjectBehavior;
 use Serializable;
@@ -403,8 +403,8 @@ class CollectionSpec extends ObjectBehavior
             )
             ->shouldReturn('not found');
 
-        $this->find('\DusanKasan\Knapsack\isCollection', null, true)->first()->shouldReturn(5);
-        $this->find('\DusanKasan\Knapsack\isCollection')->shouldReturn([5]);
+        $this->find('\Invertus\Knapsack\isCollection', null, true)->first()->shouldReturn(5);
+        $this->find('\Invertus\Knapsack\isCollection')->shouldReturn([5]);
     }
 
     function it_can_count_by()
@@ -1059,19 +1059,19 @@ class CollectionSpec extends ObjectBehavior
     {
         $this->beConstructedWith([1, 2, 3]);
         $this->zip(['a' => 1, 'b' => 2, 'c' => 4])
-            ->map('\DusanKasan\Knapsack\toArray')
+            ->map('\Invertus\Knapsack\toArray')
             ->toArray()
             ->shouldReturn([[1, 'a' => 1], [1 => 2, 'b' => 2], [2 => 3, 'c' => 4]]);
 
         $this->zip([4, 5, 6], [7, 8, 9])
-            ->map('\DusanKasan\Knapsack\values')
-            ->map('\DusanKasan\Knapsack\toArray')
+            ->map('\Invertus\Knapsack\values')
+            ->map('\Invertus\Knapsack\toArray')
             ->toArray()
             ->shouldReturn([[1, 4, 7], [2, 5, 8], [3, 6, 9]]);
 
         $this->zip([4, 5])
-            ->map('\DusanKasan\Knapsack\values')
-            ->map('\DusanKasan\Knapsack\toArray')
+            ->map('\Invertus\Knapsack\values')
+            ->map('\Invertus\Knapsack\toArray')
             ->toArray()
             ->shouldReturn([[1, 4], [2, 5]]);
     }
@@ -1081,7 +1081,7 @@ class CollectionSpec extends ObjectBehavior
         $this->beConstructedWith([1, 2, 3]);
         $this
             ->transform(function (Collection $collection) {
-                return $collection->map('\DusanKasan\Knapsack\increment');
+                return $collection->map('\Invertus\Knapsack\increment');
             })
             ->toArray()
             ->shouldReturn([2, 3, 4]);
@@ -1279,18 +1279,18 @@ class CollectionSpec extends ObjectBehavior
         $this->beConstructedWith([1, 3, 2]);
 
         $this
-            ->sort('\DusanKasan\Knapsack\compare')
+            ->sort('\Invertus\Knapsack\compare')
             ->values()
             ->toArray()
             ->shouldReturn([1, 2, 3]);
 
         $this
-            ->map('\DusanKasan\Knapsack\compare')
+            ->map('\Invertus\Knapsack\compare')
             ->toArray()
             ->shouldReturn([1, 1, 0]);
 
         $this
-            ->map('\DusanKasan\Knapsack\decrement')
+            ->map('\Invertus\Knapsack\decrement')
             ->toArray()
             ->shouldReturn([0, 2, 1]);
     }
@@ -1307,8 +1307,8 @@ class CollectionSpec extends ObjectBehavior
                 [1, 2, 3],
                 new ArrayIterator(['a', 'b', 'c']),
                 true,
-                new \DusanKasan\Knapsack\Tests\Helpers\Car('sedan', 5),
-                \DusanKasan\Knapsack\concat([1], [1]),
+                new \Invertus\Knapsack\Tests\Helpers\Car('sedan', 5),
+                \Invertus\Knapsack\concat([1], [1]),
             ]
         );
 
@@ -1323,7 +1323,7 @@ class CollectionSpec extends ObjectBehavior
                 ['a', 'b', 'c'],
                 true,
                 [
-                    'DusanKasan\Knapsack\Tests\Helpers\Car' => [
+                    'Invertus\Knapsack\Tests\Helpers\Car' => [
                         'numberOfSeats' => 5,
                      ],
 
@@ -1355,7 +1355,7 @@ class CollectionSpec extends ObjectBehavior
                 ['a', 'b', 'c'],
                 true,
                 [
-                    'DusanKasan\Knapsack\Tests\Helpers\Car' => [
+                    'Invertus\Knapsack\Tests\Helpers\Car' => [
                         'numberOfSeats' => 5,
                     ],
                 ],

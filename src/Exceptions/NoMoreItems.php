@@ -1,6 +1,6 @@
 <?php
 
-namespace DusanKasan\Knapsack\Exceptions;
+namespace Invertus\Knapsack\Exceptions;
 
 class NoMoreItems extends RuntimeException
 {

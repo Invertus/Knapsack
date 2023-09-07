@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\DusanKasan\Knapsack\Exceptions;
+namespace spec\Invertus\Knapsack\Exceptions;
 
-use DusanKasan\Knapsack\Exceptions\RuntimeException;
+use Invertus\Knapsack\Exceptions\RuntimeException;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

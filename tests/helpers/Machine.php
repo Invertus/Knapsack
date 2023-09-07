@@ -1,6 +1,6 @@
 <?php
 
-namespace DusanKasan\Knapsack\Tests\Helpers;
+namespace Invertus\Knapsack\Tests\Helpers;
 
 class Machine
 {

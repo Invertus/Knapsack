@@ -1,6 +1,6 @@
 <?php
 
-namespace DusanKasan\Knapsack;
+namespace Invertus\Knapsack;
 
 /**
  * Returns its argument.
